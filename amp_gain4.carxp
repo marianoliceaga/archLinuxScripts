@@ -19,20 +19,37 @@
    <Label>amp_stereo</Label>
    <UniqueID>1049</UniqueID>
   </Info>
+
   <Data>
    <Active>Yes</Active>
    <ControlChannel>1</ControlChannel>
    <Options>0x0</Options>
+
    <Parameter>
     <Index>0</Index>
     <Name>Gain</Name>
-    <Value>4.0</Value>
+    <Value>1</Value>
    </Parameter>
   </Data>
  </Plugin>
 
  <ExternalPatchbay>
-  <!-- Input connections: Brave + Bitwig to Carla audio-in -->
+  <Connection>
+   <Source>UMC404HD 192k Direct UMC404HD 192k:capture_FL</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>UMC404HD 192k Direct UMC404HD 192k:capture_FR</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:out1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:out2</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
   <Connection>
    <Source>Brave:output_FL</Source>
    <Target>Carla:audio-in1</Target>
@@ -42,42 +59,37 @@
    <Target>Carla:audio-in2</Target>
   </Connection>
   <Connection>
-   <Source>Bitwig Studio:out1</Source>
-   <Target>Carla:audio-in3</Target>
+   <Source>Carla:audio-out1</Source>
+   <Target>Carla.113/Stereo Amplifier:Input (Left)</Target>
   </Connection>
   <Connection>
-   <Source>Bitwig Studio:out2</Source>
-   <Target>Carla:audio-in4</Target>
-  </Connection>
-
-  <!-- Route Carla audio-in1/3 (Left) to Amplifier Left -->
-  <Connection>
-   <Source>Carla:audio-in1</Source>
-   <Target>Stereo Amplifier:Input (Left)</Target>
+   <Source>Carla:audio-out2</Source>
+   <Target>Carla.113/Stereo Amplifier:Input (Right)</Target>
   </Connection>
   <Connection>
-   <Source>Carla:audio-in3</Source>
-   <Target>Stereo Amplifier:Input (Left)</Target>
-  </Connection>
-
-  <!-- Route Carla audio-in2/4 (Right) to Amplifier Right -->
-  <Connection>
-   <Source>Carla:audio-in2</Source>
-   <Target>Stereo Amplifier:Input (Right)</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla:audio-in4</Source>
-   <Target>Stereo Amplifier:Input (Right)</Target>
-  </Connection>
-
-  <!-- Output from amplifier to hardware -->
-  <Connection>
-   <Source>Stereo Amplifier:Output (Left)</Source>
+   <Source>Carla.113/Stereo Amplifier:Output (Left)</Source>
    <Target>UMC404HD 192k Direct UMC404HD 192k:playback_FL</Target>
   </Connection>
   <Connection>
-   <Source>Stereo Amplifier:Output (Right)</Source>
+   <Source>Carla.113/Stereo Amplifier:Output (Right)</Source>
    <Target>UMC404HD 192k Direct UMC404HD 192k:playback_FR</Target>
   </Connection>
+  <Positions>
+   <Position x1="1045" y1="1215" x2="2132" y2="1274">
+    <Name>UMC404HD 192k Direct UMC404HD 192k</Name>
+   </Position>
+   <Position x1="1585" y1="1229">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1798" y1="1232" pluginId="0">
+    <Name>Carla.113/Stereo Amplifier</Name>
+   </Position>
+   <Position x1="1381" y1="1351">
+    <Name>Brave</Name>
+   </Position>
+   <Position x1="1380" y1="1105">
+    <Name>Bitwig Studio</Name>
+   </Position>
+  </Positions>
  </ExternalPatchbay>
 </CARLA-PROJECT>
