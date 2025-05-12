@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>true</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- Stereo Amplifier -->
+ <Plugin>
+  <Info>
+   <Type>LADSPA</Type>
+   <Name>Stereo Amplifier</Name>
+   <Binary>/usr/lib/ladspa/amp.so</Binary>
+   <Label>amp_stereo</Label>
+   <UniqueID>1049</UniqueID>
+  </Info>
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+   <Parameter>
+    <Index>0</Index>
+    <Name>Gain</Name>
+    <Value>4.0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <!-- Input connections: Brave + Bitwig to Carla audio-in -->
+  <Connection>
+   <Source>Brave:output_FL</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Brave:output_FR</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:out1</Source>
+   <Target>Carla:audio-in3</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:out2</Source>
+   <Target>Carla:audio-in4</Target>
+  </Connection>
+
+  <!-- Route Carla audio-in1/3 (Left) to Amplifier Left -->
+  <Connection>
+   <Source>Carla:audio-in1</Source>
+   <Target>Stereo Amplifier:Input (Left)</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-in3</Source>
+   <Target>Stereo Amplifier:Input (Left)</Target>
+  </Connection>
+
+  <!-- Route Carla audio-in2/4 (Right) to Amplifier Right -->
+  <Connection>
+   <Source>Carla:audio-in2</Source>
+   <Target>Stereo Amplifier:Input (Right)</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-in4</Source>
+   <Target>Stereo Amplifier:Input (Right)</Target>
+  </Connection>
+
+  <!-- Output from amplifier to hardware -->
+  <Connection>
+   <Source>Stereo Amplifier:Output (Left)</Source>
+   <Target>UMC404HD 192k Direct UMC404HD 192k:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Stereo Amplifier:Output (Right)</Source>
+   <Target>UMC404HD 192k Direct UMC404HD 192k:playback_FR</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
