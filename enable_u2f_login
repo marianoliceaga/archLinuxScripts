@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Define variables
+U2F_LINE='auth       required     pam_u2f.so authfile=/etc/u2f_mappings cue userpresence'
+LOGIN_PAM="/etc/pam.d/login"
+AUTHFILE="/etc/u2f_mappings"
+BACKUP_FILE="/etc/pam.d/login.bak-$(date +%Y%m%d-%H%M%S)"
+CURRENT_USER=$(logname)
+
+# Ensure pam-u2f is installed
+if ! pacman -Q pam-u2f &>/dev/null; then
+    echo "Installing pam-u2f..."
+    sudo pacman -S --noconfirm pam-u2f
+fi
+
+# Prompt to generate U2F key for root and current user
+echo "Now you'll register your U2F device for root and $CURRENT_USER."
+echo "Press the button when prompted."
+
+echo -n "Generating U2F key mapping for root... "
+sudo mkdir -p /root/.config/Yubico
+sudo pamu2fcfg -u root | sudo tee /root/.config/Yubico/u2f_keys > /dev/null
+
+echo -n "Generating U2F key mapping for $CURRENT_USER... "
+sudo -u "$CURRENT_USER" mkdir -p "/home/$CURRENT_USER/.config/Yubico"
+sudo -u "$CURRENT_USER" pamu2fcfg -u "$CURRENT_USER" > "/home/$CURRENT_USER/.config/Yubico/u2f_keys"
+
+# Create unified authfile for pam_u2f
+echo "Creating $AUTHFILE"
+cat /root/.config/Yubico/u2f_keys > "$AUTHFILE"
+echo "" >> "$AUTHFILE"
+cat "/home/$CURRENT_USER/.config/Yubico/u2f_keys" >> "$AUTHFILE"
+chmod 644 "$AUTHFILE"
+
+# Backup and update /etc/pam.d/login
+echo "Backing up $LOGIN_PAM to $BACKUP_FILE"
+cp "$LOGIN_PAM" "$BACKUP_FILE"
+
+if ! grep -q 'pam_u2f.so' "$LOGIN_PAM"; then
+    echo "Adding pam_u2f.so line to $LOGIN_PAM"
+    echo "$U2F_LINE" | sudo tee -a "$LOGIN_PAM" > /dev/null
+else
+    echo "pam_u2f.so already present in $LOGIN_PAM"
+fi
+
+echo "Done. Test console login for $CURRENT_USER and root before logging out."
