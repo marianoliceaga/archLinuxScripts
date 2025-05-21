@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- Stereo Amplifier -->
+ <Plugin>
+  <Info>
+   <Type>LADSPA</Type>
+   <Name>Stereo Amplifier</Name>
+   <Binary>/usr/lib/ladspa/amp.so</Binary>
+   <Label>amp_stereo</Label>
+   <UniqueID>1049</UniqueID>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Gain</Name>
+    <Value>5</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>UMC404HD 192k Direct UMC404HD 192k:capture_FL</Source>
+   <Target>Bitwig Studio:in1</Target>
+  </Connection>
+  <Connection>
+   <Source>UMC404HD 192k Direct UMC404HD 192k:capture_FR</Source>
+   <Target>Bitwig Studio:in2</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:out1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Bitwig Studio:out2</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>UMC404HD 192k Direct UMC404HD 192k:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>UMC404HD 192k Direct UMC404HD 192k:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Brave:output_FL</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Brave:output_FR</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1452" y1="971" x2="2285" y2="1071">
+    <Name>UMC404HD 192k Direct UMC404HD 192k</Name>
+   </Position>
+   <Position x1="1550" y1="1348" x2="2075" y2="1472">
+    <Name>Comet Lake PCH-LP cAVS Pro</Name>
+   </Position>
+   <Position x1="1800" y1="1007">
+    <Name>Bitwig Studio</Name>
+   </Position>
+   <Position x1="2025" y1="1100">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1811" y1="1345">
+    <Name>Brave</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

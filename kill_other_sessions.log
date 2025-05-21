@@ -1,0 +1,103 @@
+[vie 09 may 2025 07:35:29 -03] --- Starting session cleanup ---
+[vie 09 may 2025 07:35:29 -03] ⚠️ Múltiples sesiones detectadas para marian.
+[vie 09 may 2025 07:35:29 -03] Killing Xorg session on  (PID 69051)
+[vie 09 may 2025 07:35:29 -03] --- Cleanup completed ---
+[vie 09 may 2025 07:36:20 -03] --- Starting session cleanup ---
+[vie 09 may 2025 07:36:20 -03] ⚠️ Múltiples sesiones detectadas para marian.
+[vie 09 may 2025 07:36:20 -03] Killing Xorg session on  (PID 72546)
+[vie 09 may 2025 07:36:21 -03] --- Cleanup completed ---
+[vie 09 may 2025 07:38:00 -03] --- Starting session cleanup ---
+[vie 09 may 2025 07:38:00 -03] ⚠️ Múltiples sesiones detectadas para marian.
+[vie 09 may 2025 07:38:00 -03] Killing Xorg session on  (PID 79251)
+[vie 09 may 2025 07:38:00 -03] --- Cleanup completed ---
+[vie 09 may 2025 07:40:32 -03] --- Starting session cleanup ---
+[vie 09 may 2025 07:40:32 -03] Killing Xorg session on  (PID 89340)
+[vie 09 may 2025 07:40:32 -03] --- Cleanup completed ---
+[vie 09 may 2025 07:45:43 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:02:44 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:02:44 -03] Killing Xorg session on  (PID 178252)
+[vie 09 may 2025 08:02:44 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:19:45 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:19:45 -03] Killing Xorg session on  (PID 247655)
+[vie 09 may 2025 08:19:45 -03] unlock.flag detected, login shell not modified.
+[vie 09 may 2025 08:19:45 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:21:14 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:21:14 -03] Killing Xorg session on  (PID 1411)
+[vie 09 may 2025 08:21:20 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:29:10 -03] Session watchdog started.
+[vie 09 may 2025 08:29:10 -03] Activando bloqueo de futuros accesos...
+[vie 09 may 2025 08:39:08 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:08 -03] Killing Xorg session on  (PID 7843)
+[vie 09 may 2025 08:39:08 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:20 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:20 -03] Killing Xorg session on  (PID 7980)
+[vie 09 may 2025 08:39:20 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:27 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:27 -03] Killing Xorg session on  (PID 8076)
+[vie 09 may 2025 08:39:27 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:29 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:29 -03] Killing Xorg session on  (PID 8123)
+[vie 09 may 2025 08:39:29 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:30 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:30 -03] Killing Xorg session on  (PID 8175)
+[vie 09 may 2025 08:39:30 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:31 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:31 -03] Killing Xorg session on  (PID 8218)
+[vie 09 may 2025 08:39:31 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:31 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:31 -03] Killing Xorg session on  (PID 8257)
+[vie 09 may 2025 08:39:31 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:32 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:32 -03] Killing Xorg session on  (PID 8304)
+[vie 09 may 2025 08:39:32 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:33 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:33 -03] Killing Xorg session on  (PID 8363)
+[vie 09 may 2025 08:39:33 -03] --- Cleanup completed ---
+[vie 09 may 2025 08:39:34 -03] --- Starting session cleanup ---
+[vie 09 may 2025 08:39:34 -03] Killing Xorg session on  (PID 8406)
+[vie 09 may 2025 08:39:34 -03] --- Cleanup completed ---
+[vie 09 may 2025 19:28:34 -03] --- Starting session cleanup ---
+[vie 09 may 2025 19:28:34 -03] Killing Xorg session on  (PID 1517)
+[vie 09 may 2025 19:28:41 -03] --- Cleanup completed ---
+[vie 09 may 2025 20:14:04 -03] --- Starting session cleanup ---
+[vie 09 may 2025 20:14:04 -03] Killing Xorg session on  (PID 1393)
+[vie 09 may 2025 20:14:11 -03] --- Cleanup completed ---
+[sáb 10 may 2025 05:25:29 -03] --- Starting session cleanup ---
+[sáb 10 may 2025 05:25:29 -03] Killing Xorg session on  (PID 1399)
+[sáb 10 may 2025 05:25:36 -03] unlock.flag detected, login shell not modified.
+[sáb 10 may 2025 05:25:36 -03] --- Cleanup completed ---
+[sáb 10 may 2025 07:16:52 -03] --- Starting session cleanup ---
+[sáb 10 may 2025 07:16:52 -03] Killing Xorg session on  (PID 1418)
+[sáb 10 may 2025 07:16:58 -03] unlock.flag detected, login shell not modified.
+[sáb 10 may 2025 07:16:58 -03] --- Cleanup completed ---
+[sáb 10 may 2025 17:13:20 -03] --- Starting session cleanup ---
+[sáb 10 may 2025 17:13:20 -03] Killing Xorg session on  (PID 1791)
+[sáb 10 may 2025 17:13:26 -03] unlock.flag detected, login shell not modified.
+[sáb 10 may 2025 17:13:26 -03] --- Cleanup completed ---
+[sáb 10 may 2025 19:42:39 -03] --- Starting session cleanup ---
+[sáb 10 may 2025 19:42:39 -03] Killing Xorg session on  (PID 1506)
+[sáb 10 may 2025 19:42:47 -03] unlock.flag detected, login shell not modified.
+[sáb 10 may 2025 19:42:47 -03] --- Cleanup completed ---
+[lun 12 may 2025 02:21:11 -03] --- Starting session cleanup ---
+[lun 12 may 2025 02:21:11 -03] Killing Xorg session on  (PID 1418)
+[lun 12 may 2025 02:21:16 -03] unlock.flag detected, login shell not modified.
+[lun 12 may 2025 02:21:16 -03] --- Cleanup completed ---
+[lun 12 may 2025 04:33:28 -03] --- Starting session cleanup ---
+[lun 12 may 2025 04:33:28 -03] Killing Xorg session on  (PID 1415)
+[lun 12 may 2025 04:33:35 -03] unlock.flag detected, login shell not modified.
+[lun 12 may 2025 04:33:35 -03] --- Cleanup completed ---
+[lun 12 may 2025 22:05:17 -03] --- Starting session cleanup ---
+[lun 12 may 2025 22:05:17 -03] Killing Xorg session on  (PID 1398)
+[lun 12 may 2025 22:05:23 -03] unlock.flag detected, login shell not modified.
+[lun 12 may 2025 22:05:23 -03] --- Cleanup completed ---
+[mar 13 may 2025 01:02:37 -03] --- Starting session cleanup ---
+[mar 13 may 2025 01:02:37 -03] Killing Xorg session on  (PID 1402)
+[mar 13 may 2025 01:02:44 -03] unlock.flag detected, login shell not modified.
+[mar 13 may 2025 01:02:45 -03] --- Cleanup completed ---
+[mar 13 may 2025 01:35:31 -03] --- Starting session cleanup ---
+[mar 13 may 2025 01:35:31 -03] Killing Xorg session on  (PID 5946)
+[mar 13 may 2025 01:35:35 -03] unlock.flag detected, login shell not modified.
+[mar 13 may 2025 01:35:35 -03] --- Cleanup completed ---
+[mar 13 may 2025 01:51:32 -03] --- Starting session cleanup ---
+[mar 13 may 2025 01:51:32 -03] Killing Xorg session on  (PID 25250)
+[mar 13 may 2025 01:51:35 -03] --- Cleanup completed ---
